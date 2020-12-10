@@ -25,7 +25,7 @@ function startUp() {
         "View All Departments",
         "View All Roles",
         "View All Employees",
-        "Add Employees",
+        "Add An Employee",
         "Add A Departments",
         "Add A Roles",
         "Update An Employee Role",
@@ -138,7 +138,7 @@ function addDept() {
   inquirer
     .prompt({
       type: "input",
-      message: "What would you like to name the new department?",
+      message: "What should the new department be named?",
       name: "department"
     })
     .then(function(answer) {
@@ -158,17 +158,17 @@ function addRole() {
   var questions = [
     {
       type: "input",
-      message: "What type of role would you like to add?",
+      message: "What role are we adding?",
       name: "title"
     },
     {
       type: "input",
-      message: "In what department is the new role?",
+      message: "What department is the new role in?",
       name: "id"
     },
     {
       type: "list",
-      message: "What is the salary for this role?",
+      message: "What salary should they make?",
       name: "salary"
     }
   ];
@@ -195,7 +195,7 @@ function updateEmpRole() {
   inquirer.prompt({
    type: "list",
    name: "role id",
-  message: " WHich role would you like to assign the employee?",
+  message: "What role should the employee be assigned?",
   choices: empChoices
 
   })
